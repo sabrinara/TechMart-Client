@@ -8,6 +8,7 @@ import Register from '../pages/Register';
 import AddProduct from '../pages/AddProduct';
 import MyCart from '../pages/MyCart';
 
+
 const routes = createBrowserRouter([
     {
         path: '/',
@@ -27,6 +28,7 @@ const routes = createBrowserRouter([
                 path: "/register",
                 element:<Register></Register>
             },
+          
             {
                 path:"/addproduct",
                 element:<AddProduct></AddProduct>
