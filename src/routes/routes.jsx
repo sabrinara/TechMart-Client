@@ -7,6 +7,8 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import AddProduct from '../pages/AddProduct';
 import MyCart from '../pages/MyCart';
+import PrivateRouters from './PrivateRoutes';
+import ABrand from '../components/Service/ABrand/ABrand';
 
 
 const routes = createBrowserRouter([
@@ -28,14 +30,18 @@ const routes = createBrowserRouter([
                 path: "/register",
                 element:<Register></Register>
             },
-          
             {
                 path:"/addproduct",
-                element:<AddProduct></AddProduct>
+                element:<PrivateRouters><AddProduct></AddProduct></PrivateRouters>
             },
             {
                 path:"/mycart",
-                element:<MyCart></MyCart>
+                element:<PrivateRouters><MyCart></MyCart></PrivateRouters>
+            },
+            {
+                path:"/abrand/:id",
+                element:<PrivateRouters><ABrand></ABrand></PrivateRouters>,
+                loader: () => fetch('/data.json')
             }
         ]
     },

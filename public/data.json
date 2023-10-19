@@ -3,9 +3,9 @@
       "id": 1,
       "brand_image": "https://i.ibb.co/BrmvK69/logo.png",
       "brand_name": "SAMSUNG",
-      "slider1":"",
-      "slider2":"",
-      "slider3":"",
+      "slider1":"https://i.ibb.co/bXf86N8/slider-2.png",
+      "slider2":"https://i.ibb.co/M7YRchT/slider-1.jpg",
+      "slider3":"https://i.ibb.co/GV81mKR/slider-3.webp",
       "products": [
         {
           "id": 101,
@@ -47,7 +47,7 @@
     },
     {
       "id": 2,
-      "brand_image": "https://i.ibb.co/6wm5wxK/logo.png",
+      "brand_image": "https://i.ibb.co/HVBNj7C/logo.png",
       "brand_name": "Apple",
       "slider1":"",
       "slider2":"",
@@ -93,7 +93,7 @@
     },
     {
       "id": 3,
-      "brand_image": "https://i.ibb.co/dcm6cXT/sony-logo.jpg",
+      "brand_image": "https://i.ibb.co/fxVywxt/logo.png",
       "brand_name": "SONY",
       "slider1":"",
       "slider2":"",
@@ -185,7 +185,7 @@
     },
     {
       "id": 5,
-      "brand_image": "https://i.ibb.co/d2RB1TP/logo.png",
+      "brand_image": "https://i.ibb.co/ZJ08FKs/logohp.png",
       "brand_name": "Intel",
       "slider1":"",
       "slider2":"",
@@ -231,7 +231,7 @@
     },
     {
       "id": 6,
-      "brand_image": "https://i.ibb.co/jbq4DMX/hp.png",
+      "brand_image": "https://i.ibb.co/WD4gsDc/hp.png",
       "brand_name": "HP",
       "slider1":"",
       "slider2":"",

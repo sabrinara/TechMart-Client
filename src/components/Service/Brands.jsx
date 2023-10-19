@@ -5,10 +5,10 @@ const Brands = ({ brand }) => {
     const { id, brand_image, brand_name } = brand || {};
     return (
         <div>
-            <div className="relative flex flex-col mt-6 text-cyan-700 bg-white shadow-md w-72 h-72 rounded-xl bg-clip-border">
-                <Link to={`/barndslist/${id}`}>
+            <div className="relative flex flex-col mt-6 text-cyan-700 bg-white shadow-md w-72 h-80 rounded-xl bg-clip-border">
+                <Link to={`/abrand/${id}`}>
                     <div className="flex flex-col items-center justify-center pt-10">
-                        <img src={brand_image} className="w-40 h-32" alt="" />
+                        <img src={brand_image} className="w-40 h-36" alt="" />
                         <h5 className="block mb-2 mt-3 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                             {brand_name}
                         </h5>

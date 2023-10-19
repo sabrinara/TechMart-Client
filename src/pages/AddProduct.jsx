@@ -32,8 +32,18 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Product Type</span>
                                 </label>
-                                <input type="text" placeholder="Type of the Product" className="input input-bordered" required />
+                                <select className="select select-bordered" required>
+                                    <option value="" disabled selected>Select product type</option>
+                                    <option value="phone">Phone</option>
+                                    <option value="computer">Computer</option>
+                                    <option value="laptop">Laptop</option>
+                                    <option value="refrigerator">Refrigerator</option>
+                                    <option value="headphone">Headphone</option>
+                                    <option value="webcam">Webcam</option>
+                                    <option value="speaker">Speaker</option>
+                                </select>
                             </div>
+
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Product price</span>

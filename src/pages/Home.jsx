@@ -14,13 +14,13 @@ const Home = () => {
         fetch('/data.json')
             .then(res => res.json())
             .then(data => setBrand(data))
-            .catch (error => console.error(error));
-    },[]);
+            .catch(error => console.error(error));
+    }, []);
     return (
         <div>
-            <Banner></Banner> 
-            <AboutUs></AboutUs>
+            <Banner></Banner>
             <BrandsList brandslist={brand}></BrandsList>
+            <AboutUs></AboutUs>
             <EmployeeTalk></EmployeeTalk>
         </div>
     );
