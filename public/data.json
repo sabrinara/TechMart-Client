@@ -1,0 +1,278 @@
+[
+    {
+      "id": 1,
+      "brand_image": "https://i.ibb.co/BrmvK69/logo.png",
+      "brand_name": "SAMSUNG",
+      "slider1":"",
+      "slider2":"",
+      "slider3":"",
+      "products": [
+        {
+          "id": 101,
+          "image": "samsung_phone_image_url",
+          "name": "Galaxy S21",
+          "type": "phone",
+          "price": 899.99,
+          "rating": 4.5,
+          "description": "The latest flagship smartphone with a stunning display and powerful camera."
+        },
+        {
+          "id": 102,
+          "image": "samsung_computer_image_url",
+          "name": "Notebook 9 Pro",
+          "type": "computer",
+          "price": 1299.99,
+          "rating": 4.2,
+          "description": "A high-performance and sleek laptop for professional use."
+        },
+        {
+          "id": 103,
+          "image": "samsung_headphone_image_url",
+          "name": "Galaxy Buds Pro",
+          "type": "headphone",
+          "price": 149.99,
+          "rating": 4.7,
+          "description": "Wireless earbuds with immersive sound and active noise cancellation."
+        },
+        {
+          "id": 104,
+          "image": "samsung_other_image_url",
+          "name": "SmartThings Hub",
+          "type": "other",
+          "price": 99.99,
+          "rating": 4.0,
+          "description": "A central hub for smart home control, connecting all your devices seamlessly."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "brand_image": "https://i.ibb.co/6wm5wxK/logo.png",
+      "brand_name": "Apple",
+      "slider1":"",
+      "slider2":"",
+      "slider3":"",
+      "products": [
+        {
+          "id": 201,
+          "image": "apple_phone_image_url",
+          "name": "iPhone 13",
+          "type": "phone",
+          "price": 1099.99,
+          "rating": 4.8,
+          "description": "The latest iPhone with advanced camera features and powerful performance."
+        },
+        {
+          "id": 202,
+          "image": "apple_computer_image_url",
+          "name": "MacBook Pro",
+          "type": "computer",
+          "price": 2399.99,
+          "rating": 4.9,
+          "description": "A premium laptop for professionals, offering top-notch performance and a stunning Retina display."
+        },
+        {
+          "id": 203,
+          "image": "apple_headphone_image_url",
+          "name": "AirPods Pro",
+          "type": "headphone",
+          "price": 249.99,
+          "rating": 4.6,
+          "description": "Wireless earbuds with active noise cancellation and a comfortable fit."
+        },
+        {
+          "id": 204,
+          "image": "apple_other_image_url",
+          "name": "HomePod Mini",
+          "type": "other",
+          "price": 99.99,
+          "rating": 4.3,
+          "description": "A compact smart speaker delivering impressive sound quality for your home."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "brand_image": "https://i.ibb.co/dcm6cXT/sony-logo.jpg",
+      "brand_name": "SONY",
+      "slider1":"",
+      "slider2":"",
+      "slider3":"",
+      "products": [
+        {
+          "id": 301,
+          "image": "sony_phone_image_url",
+          "name": "Xperia 1 III",
+          "type": "phone",
+          "price": 1199.99,
+          "rating": 4.4,
+          "description": "A high-end smartphone with a focus on photography and multimedia experiences."
+        },
+        {
+          "id": 302,
+          "image": "sony_computer_image_url",
+          "name": "VAIO SX12",
+          "type": "computer",
+          "price": 1599.99,
+          "rating": 4.1,
+          "description": "A compact and powerful laptop designed for business professionals."
+        },
+        {
+          "id": 303,
+          "image": "sony_headphone_image_url",
+          "name": "WH-1000XM4",
+          "type": "headphone",
+          "price": 349.99,
+          "rating": 4.7,
+          "description": "Over-ear headphones with industry-leading noise-canceling technology."
+        },
+        {
+          "id": 304,
+          "image": "sony_other_image_url",
+          "name": "PlayStation 5",
+          "type": "other",
+          "price": 499.99,
+          "rating": 4.8,
+          "description": "Next-gen gaming console with cutting-edge features for immersive gameplay."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "brand_image": "https://i.ibb.co/SQkRFSD/google-logo.jpg",
+      "brand_name": "Google",
+      "slider1":"",
+      "slider2":"",
+      "slider3":"",
+      "products": [
+        {
+          "id": 401,
+          "image": "google_phone_image_url",
+          "name": "Pixel 6",
+          "type": "phone",
+          "price": 799.99,
+          "rating": 4.6,
+          "description": "Google's flagship phone with advanced camera capabilities and pure Android experience."
+        },
+        {
+          "id": 402,
+          "image": "google_computer_image_url",
+          "name": "Pixelbook Go",
+          "type": "computer",
+          "price": 899.99,
+          "rating": 4.3,
+          "description": "A lightweight and portable Chromebook for productivity on the go."
+        },
+        {
+          "id": 403,
+          "image": "google_headphone_image_url",
+          "name": "Pixel Buds",
+          "type": "headphone",
+          "price": 179.99,
+          "rating": 4.5,
+          "description": "Wireless earbuds with Google Assistant integration and clear audio."
+        },
+        {
+          "id": 404,
+          "image": "google_other_image_url",
+          "name": "Nest Hub",
+          "type": "other",
+          "price": 129.99,
+          "rating": 4.2,
+          "description": "Smart display with voice control, perfect for managing your smart home devices."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "brand_image": "https://i.ibb.co/d2RB1TP/logo.png",
+      "brand_name": "Intel",
+      "slider1":"",
+      "slider2":"",
+      "slider3":"",
+      "products": [
+        {
+          "id": 501,
+          "image": "intel_computer_image_url",
+          "name": "Core i9-11900K",
+          "type": "computer",
+          "price": 499.99,
+          "rating": 4.7,
+          "description": "High-performance desktop processor for gaming and content creation."
+        },
+        {
+          "id": 502,
+          "image": "intel_other_image_url",
+          "name": "Intel NUC",
+          "type": "other",
+          "price": 299.99,
+          "rating": 4.4,
+          "description": "Mini PC with versatile applications, suitable for various computing needs."
+        },
+        {
+          "id": 503,
+          "image": "intel_other_image_url",
+          "name": "Intel SSD 660p",
+          "type": "other",
+          "price": 129.99,
+          "rating": 4.6,
+          "description": "Fast and reliable SSD for enhancing system performance and responsiveness."
+        },
+        {
+          "id": 504,
+          "image": "intel_other_image_url",
+          "name": "Intel Core i5-11600K",
+          "type": "other",
+          "price": 299.99,
+          "rating": 4.5,
+          "description": "Mid-range processor delivering a balance of performance and value."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "brand_image": "https://i.ibb.co/jbq4DMX/hp.png",
+      "brand_name": "HP",
+      "slider1":"",
+      "slider2":"",
+      "slider3":"",
+      "products": [
+        {
+          "id": 601,
+          "image": "hp_computer_image_url",
+          "name": "HP Spectre x360",
+          "type": "computer",
+          "price": 1299.99,
+          "rating": 4.5,
+          "description": "Convertible laptop with a sleek design, powerful specs, and a versatile form factor."
+        },
+        {
+          "id": 602,
+          "image": "hp_computer_image_url",
+          "name": "HP Omen 15",
+          "type": "computer",
+          "price": 1599.99,
+          "rating": 4.2,
+          "description": "Gaming laptop with high-refresh-rate display and performance-driven components."
+        },
+        {
+          "id": 603,
+          "image": "hp_headphone_image_url",
+          "name": "HP Pavilion Gaming Headset 400",
+          "type": "headphone",
+          "price": 79.99,
+          "rating": 4.0,
+          "description": "Immersive gaming audio with a comfortable and durable design."
+        },
+        {
+          "id": 604,
+          "image": "hp_other_image_url",
+          "name": "HP OfficeJet Pro 9015",
+          "type": "other",
+          "price": 229.99,
+          "rating": 4.3,
+          "description": "All-in-one printer for efficient home and office document management."
+        }
+      ]
+    }
+  ]
