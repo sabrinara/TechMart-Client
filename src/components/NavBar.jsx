@@ -25,7 +25,7 @@ const NavBar = () => {
                 <>
 
                     <li>
-                        <NavLink to="/addProduct">Add Product</NavLink>
+                        <NavLink to="/addproduct">Add Product</NavLink>
                     </li>
                     <li>
                         <NavLink to="/mycart">My Cart</NavLink>
@@ -44,7 +44,7 @@ const NavBar = () => {
         </>
     );
     return (
-        <div className="sticky top-0 z-50">
+        <div className="sticky top-0 z-50 bg-slate-50">
             <div className="navbar p-4 ">
                 <div className="navbar-start">
                     <div className="dropdown lg:hidden">

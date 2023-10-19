@@ -1,8 +1,8 @@
 const Footer = () => {
     return (
         <footer className="w-full bg-white p-12">
-            <div className="flex  items-center justify-center gap-y-6  bg-white text-center md:justify-between">
-                <div className="flex items-center lg:ml-32">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-y-6  bg-white text-center md:justify-between">
+                <div className="flex  items-center  md: mr-10 lg:ml-32 ">
                     <img src={"https://i.ibb.co/ThYFm6z/logo.png"} alt="logo-ct" className="w-10" />
                     <h1 className="text-2xl font-serif font-semibold text-cyan-800">TechMart</h1>
                 </div>
