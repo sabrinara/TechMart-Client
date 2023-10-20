@@ -1,8 +1,13 @@
-# React + Vite
+# TechShade
+### Live Link : 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## About Website 
+- Its a convenient website for anyone to explore there desired Brand.
+- Website have Technology and Electronics Products.
+- At home visitor can see our brands. And login User can see products and detail of a product,other features.
+- Login User can add product or update or delete product.
+- Also have a my cart section for users.
+- We use firebase for Authentication.
+- It is responsive for all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

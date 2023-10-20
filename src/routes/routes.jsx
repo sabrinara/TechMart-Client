@@ -9,6 +9,7 @@ import AddProduct from '../pages/AddProduct';
 import MyCart from '../pages/MyCart';
 import PrivateRouters from './PrivateRoutes';
 import ABrand from '../components/Service/ABrand/ABrand';
+import ABrandDetail from '../components/Service/ABrand/ABrandDetail';
 
 
 const routes = createBrowserRouter([
@@ -41,6 +42,11 @@ const routes = createBrowserRouter([
             {
                 path:"/abrand/:id",
                 element:<PrivateRouters><ABrand></ABrand></PrivateRouters>,
+                loader: () => fetch('/data.json')
+            },
+            {
+                path:"/abranddetail/:id",
+                element:<PrivateRouters><ABrandDetail></ABrandDetail></PrivateRouters>,
                 loader: () => fetch('/data.json')
             }
         ]

@@ -5,7 +5,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 
 
-const NavBar = () => {
+const NavBar = ({ toggleTheme }) => {
     const { user, logOut } = useContext(AuthContext)
     const handleLogOut = () => {
         logOut()
@@ -44,18 +44,18 @@ const NavBar = () => {
         </>
     );
     return (
-        <div className="sticky top-0 z-50 bg-slate-50">
+        <div className="sticky top-0 z-50 bg-slate-50 opacity-80">
             <div className="navbar p-4 ">
                 <div className="navbar-start">
                     <div className="dropdown lg:hidden">
                         <label tabIndex={0} className="btn btn-ghost hover:bg-cyan-900 hover:text-white  focus:text-white lg:hidden">
-                           <AiOutlineMenu className="w-6 h-6"></AiOutlineMenu>
+                            <AiOutlineMenu className="w-6 h-6"></AiOutlineMenu>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-cyan-900 text-white rounded w-32">
                             {navLinks}
                         </ul>
                     </div>
-                    <Link to="/" className="items-center normal-case text-cyan-800 font-serif font-extrabold text-4xl  hidden md:flex">
+                    <Link to="/" className="items-center normal-case text-cyan-800 font-serif font-extrabold text-4xl  hidden lg:flex">
                         <img className="w-10 h-10 mx-auto" src={"https://i.ibb.co/ThYFm6z/logo.png"} alt="" />
                         TechMart
                     </Link>
@@ -71,7 +71,7 @@ const NavBar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <Link to="/" className="flex lg:hidden items-center normal-case text-cyan-800 font-serif font-extrabold text-4xl lg:text-4xl ">
+                    <Link to="/" className="flex lg:hidden  items-center normal-case text-cyan-800 font-serif font-extrabold text-4xl lg:text-4xl ">
                         <img className="w-10 h-10 lg:hidden mx-auto" src={"https://i.ibb.co/ThYFm6z/logo.png"} alt="" />
                         TechMart
                     </Link>
@@ -79,7 +79,8 @@ const NavBar = () => {
                 </div>
 
                 <div className="navbar-end">
-                    <div className="flex-none gap-2">
+                    <div className="flex flex-row items-center justify-center gap-2">
+                     
                         {
                             user?.email ?
 
@@ -104,6 +105,12 @@ const NavBar = () => {
                                 <Link to="/login" className="btn btn-outline btn-info">Login</Link>
 
                         }
+                           <input
+                            onChange={toggleTheme}
+                            type="checkbox"
+                            className="toggle toggle-sm mx-1"
+                            checked
+                        />
                     </div>
                 </div>
             </div>
