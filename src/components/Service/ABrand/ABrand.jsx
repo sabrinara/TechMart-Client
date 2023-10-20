@@ -4,17 +4,16 @@ const ABrand = () => {
     const abrands = useLoaderData();
     const { id } = useParams();
     const abrand = abrands.find(brand => brand.id == id);
-    const { brand_image, brand_name, slider1, slider2, slider3, products } = abrand || {};
+    const { brand_name, slider1, slider2, slider3, products } = abrand || {};
     console.log(abrand);
 
     return (
         <div>
-            {/* <img src={brand_image} alt="" /> */}
-            <h1>{brand_name}</h1>
+            <h1 className="text-5xl font-bold text-center my-16 text-cyan-900">{brand_name}</h1>
 
             {/* slider div */}
             <div className="text-center">
-                <div className="carousel w-[80%] ">
+                <div className="carousel w-[70%] ">
                     <div id="slide1" className="carousel-item relative w-full">
                         <img src={slider1} className="w-full" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -38,23 +37,29 @@ const ABrand = () => {
                     </div>
                 </div>
             </div>
-            {
-                products.map(product => <div key={product.id}>
-                    <div className="card w-96 bg-base-100 shadow-xl">
-                        <figure className="px-10 pt-10">
-                            <img src={product.image} alt="Shoes" className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <h2 className="card-title">{product.name}</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <div className="card-actions">
-                                <button className="btn btn-primary">Buy Now</button>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-20 my-20 ">
+                {
+                    products.map(product => <div key={product.id}>
+                        <div className="card w-96 md:w-[90vh] h-[75vh] md:h-[60vh] lg:card-side bg-base-100 shadow-xl">
+                            <figure><img className="w-56 md:w-[50vh] md:h-80" src={product.image} alt="Album" /></figure>
+                            <div className="card-body md:mt-10">
+                                <h2 className="card-title">{product.name}</h2>
+                                <h1>{product.type}</h1>
+                                <h1>{product.price} $</h1>
+                                <h1>{product.rating}</h1>
+
+                                <div className="card-actions flex items-center justify-left ">
+                                    <button className="py-2 px-2 text-sm rounded bg-sky-600 text-white hover:bg-cyan-500 hover:text-white ">Details</button>
+                                    <button className="py-2 px-2 text-sm rounded bg-sky-600 text-white hover:bg-cyan-500 hover:text-white ">Update</button>
+
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                  
-                </div>)
-            }
+                    </div>)
+                }
+            </div>
+
         </div>
     );
 };
