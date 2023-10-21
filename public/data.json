@@ -2,7 +2,7 @@
     {
       "id": 1,
       "brand_image": "https://i.ibb.co/BrmvK69/logo.png",
-      "brand_name": "SAMSUNG",
+      "brand_name": "Samsung",
       "slider1":"https://i.ibb.co/bXf86N8/slider-2.png",
       "slider2":"https://i.ibb.co/M7YRchT/slider-1.jpg",
       "slider3":"https://i.ibb.co/GV81mKR/slider-3.webp",
@@ -235,7 +235,7 @@
       "brand_name": "HP",
       "slider1":"https://i.ibb.co/q0CcM2c/slider-4.jpg",
       "slider2":"https://i.ibb.co/g6LXxJ4/slider3.jpg",
-      "slider3":"https://i.ibb.co/WF2Xxf1/slider2.webp",
+      "slider3":"",
       "products": [
         {
           "id": 601,
