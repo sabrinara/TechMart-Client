@@ -7,7 +7,7 @@ const Footer = () => {
                     <h1 className="text-2xl font-serif font-semibold">TechMart</h1>
                 </div>
 
-                <ul className="flex flex-wrap items-center gap-y-2 gap-x-8 lg:mr-32">
+                <ul className="flex flex-col lg:flex-row flex-wrap items-center gap-y-2 gap-x-8 lg:mr-32">
                     <li>
                         <a
                             href="#"

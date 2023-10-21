@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
 
     const { signIn, googleSignIn } = useContext(AuthContext);
-    // const [error, setError] = useState('');
     const navigate = useNavigate();
 
 
@@ -26,11 +25,10 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 toast('Successfully Login');
-                navigate('/')
+                navigate('/');
             })
             .catch(error => {
                 console.log(error.message);
-                // setError(error.message.split('/')[1].slice(0, -2));
                 toast('Login failed. Please check your email and password.');
             });
     }
@@ -39,7 +37,7 @@ const Login = () => {
             .then((result) => {
                 console.log(result.user)
                 toast('Successfully Login');
-
+                navigate('/');
             })
             .catch(error => {
                 console.error(error);

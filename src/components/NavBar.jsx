@@ -49,7 +49,7 @@ const NavBar = ({ toggleTheme }) => {
                 <div className="navbar-start">
                     <div className="dropdown lg:hidden">
                         <label tabIndex={0} className="btn btn-ghost hover:bg-cyan-900 hover:text-white  focus:text-white lg:hidden">
-                            <AiOutlineMenu className="w-6 h-6"></AiOutlineMenu>
+                            <AiOutlineMenu className="w-3 h-4"></AiOutlineMenu>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-cyan-900 text-white rounded w-32">
                             {navLinks}
@@ -66,12 +66,12 @@ const NavBar = ({ toggleTheme }) => {
                 </div>
                 <div className="navbar-center ">
 
-                    <div className=" hidden lg:flex">
+                    <div className=" hidden lg:flex ">
                         <ul className="menu menu-horizontal px-1 gap-6">
                             {navLinks}
                         </ul>
                     </div>
-                    <Link to="/" className="flex lg:hidden  items-center normal-case text-cyan-800 font-serif font-extrabold text-4xl lg:text-4xl ">
+                    <Link to="/" className="flex mr-4 lg:hidden  items-center normal-case text-cyan-800 font-serif font-extrabold text-4xl lg:text-4xl ">
                         <img className="w-10 h-10 lg:hidden mx-auto" src={"https://i.ibb.co/ThYFm6z/logo.png"} alt="" />
                         TechMart
                     </Link>
@@ -79,14 +79,14 @@ const NavBar = ({ toggleTheme }) => {
                 </div>
 
                 <div className="navbar-end">
-                    <div className="flex flex-row items-center justify-center gap-2">
+                    <div className="flex flex-row items-center justify-center ">
                      
                         {
                             user?.email ?
 
-                                <div className="dropdown dropdown-end ">
+                                <div className="dropdown dropdown-end ml-1">
                                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar bg-cyan-900">
-                                        <div className="w-10 rounded-full">
+                                        <div className="w-10 rounded-full ">
                                             <img src={user.photoURL} />
                                         </div>
                                     </label>

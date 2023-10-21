@@ -58,36 +58,36 @@ const ABrand = () => {
             {/* Products */}
             {
                 filterProducts.length > 0 ?
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10 mx-4 md:mx-8 lg:mx-16 my-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-4 md:mx-8 lg:mx-16 my-8">
                         {filterProducts.map(product => (
-                            <div key={product._id} className="flex justify-center">
-                                <div className="card w-80  h-[75vh]  bg-base-100 shadow-xl">
-                                    <figure><img className="w-70 h-64 object-cover" src={product.photo} alt="Album" /></figure>
-                                    <div className="card-body p-4 md:p-6">
-                                        <h2 className="card-title text-lg md:text-xl lg:text-2xl xl:text-3xl">{product.name}</h2>
-                                        <p className="text-sm md:text-base lg:text-lg xl:text-xl">{product.type}</p>
-                                        <p className="text-sm md:text-base lg:text-lg xl:text-xl">{product.price} $</p>
-                                        <p className="text-sm md:text-base lg:text-lg xl:text-xl"> 
+                            <div key={product._id} className="card lg:h-[20rem] lg:card-side bg-base-100 shadow-xl">
+                                <figure className=" lg:w-[50%]" >
+                                    <img src={product.photo} className="w-full h-96 md:h-64 lg:h-full lg:object-center " alt="Album" />
+                                </figure>
+                                <div className="card-body lg:w-[50%] md:mt-6 md:mb-4">
+                                    <h2 className="card-title text-2xl">{product.name}</h2>
+                                    <p className=" text-xl">{product.type}</p> 
+                                    <p className="text-cyan-900 font-bold text-xl">Price: {product.price} $</p>
+                                    <p className="text-sm md:text-lg ">
                                         <Rating
-                                            className='text-center mb-6'
+                                            className='text-center mb-2'
                                             initialRating={product.rating}
-                                            readonly={true} 
+                                            readonly={true}
                                             emptySymbol={<span style={{ fontSize: '30px', color: 'teal' }}>☆</span>}
                                             fullSymbol={<span style={{ fontSize: '30px', color: 'teal' }}>★</span>}
                                         /></p>
+                                    <div className="flex flex-row items-center justify-start lg:justify-center gap-6 lg:gap-0 ">
+                                        <Link to={`/abranddetail/${product._id}`}>
+                                            <button className="py-2 px-4 text-sm  rounded bg-sky-600 text-white hover:bg-cyan-500 hover:text-white">Details</button>
+                                        </Link>
+                                        <Link to={`/updateproduct/${product._id}`}>
 
-                                        <div className="card-actions flex items-center justify-left mt-2">
-                                            <Link to={`/abranddetail/${product._id}`}>
-                                                <button className="py-2 px-4 text-sm md:text-base lg:text-lg xl:text-xl rounded bg-sky-600 text-white hover:bg-cyan-500 hover:text-white">Details</button>
-                                            </Link>
-                                            <Link to={`/updateproduct/${product._id}`}>
-
-                                                <button className="py-2 px-4 text-sm md:text-base lg:text-lg xl:text-xl rounded bg-sky-600 text-white hover:bg-cyan-500 hover:text-white ml-2">Update</button>
-                                            </Link>
-                                        </div>
+                                            <button className="py-2 px-4 text-sm  rounded bg-sky-600 text-white hover:bg-cyan-500 hover:text-white ml-2">Update</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
+                          
                         ))}
 
                     </div>

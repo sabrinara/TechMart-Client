@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { useState } from "react";
 import Swal from 'sweetalert2';
 import { AuthContext } from "../providers/AuthProvider";
+import { Link } from "react-router-dom";
+
 
 const MyCart = () => {
     const {user} = useContext(AuthContext);
@@ -48,19 +50,28 @@ const MyCart = () => {
                         }
                     })
                     .catch((error) => console.error(error));
-
             }
         })
 
     }
     return (
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-4 md:mx-8 lg:mx-16 my-8">
             {
                 products?.map((product) => (
-                    <div key={product._id}>
-                        <h1>{product.name}</h1>
-                        <button className="btn btn-primary" onClick={() => handleDelete(product._id)}>Delete</button>
+                    <div key={product._id} className="card lg:h-[20rem] lg:card-side bg-base-100 shadow-xl">
+                    <figure className=" lg:w-[50%]" >
+                        <img src={product.photo} className="w-full h-96 md:h-64 lg:h-full lg:object-center " alt="Album" />
+                    </figure>
+                    <div className="card-body lg:w-[50%] md:mt-10 md:mb-10">
+                        <h2 className="card-title text-2xl">{product.name}</h2>
+                        <p className=" text-xl">{product.type}</p> 
+                        <p className="text-cyan-900 font-bold text-xl">Price: {product.price} $</p>
+                        <div className="card-actions justify-start ">
+                            <button className="py-2 px-4 text-sm  rounded bg-sky-600 text-white hover:bg-cyan-500 hover:text-white ml-2"onClick={() => handleDelete(product._id)}>Delete</button>
+                        </div>
                     </div>
+                </div>
+                      
                 ))
             }
         </div>

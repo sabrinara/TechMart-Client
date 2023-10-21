@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Rating from 'react-rating';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
@@ -10,6 +10,7 @@ const UpdateProduct = () => {
     const { id } = useParams();
     console.log(id);
 
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch(`https://tech-elec-shop-backend.vercel.app/products/${id}`)
@@ -47,14 +48,14 @@ const UpdateProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
+                if(data.modifiedCount > 0){
                     Swal.fire({
                         title: 'Success',
                         text: 'Updated Product Sucessfully!',
                         icon: 'success',
                         confirmButtonText: 'Cool!',
-                      
-                      })
+                      })  
+                      navigate(`/abrands/:${id}`);
                 }
             })
     }

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useContext } from "react";
 import { useState } from "react";
-import {  useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProvider";
 
@@ -13,7 +13,7 @@ const ABrandDetail = () => {
     console.log(user);
     const { id } = useParams();
     // console.log(id);
-
+ const navigate = useNavigate();
     useEffect(() => {
         fetch(`https://tech-elec-shop-backend.vercel.app/products/${id}`)
             .then((res) => res.json())
@@ -35,7 +35,6 @@ const ABrandDetail = () => {
         rating,
         email
     }
-
     const handleAddToCart = () => {
 
         fetch('https://tech-elec-shop-backend.vercel.app/carts', {
@@ -50,12 +49,12 @@ const ABrandDetail = () => {
             // console.log(data); 
             if(data.insertedId){
                 Swal.fire({
-                    title: 'Success',
+                    title:'Success',
                     text: 'Product Added into My Cart Sucessfully!',
                     icon: 'success',
                     confirmButtonText: 'Cool!',
-                  
                   })
+                  navigate('/mycart');
             }
         })
         console.log("here cart",cartProduct);
@@ -64,18 +63,17 @@ const ABrandDetail = () => {
     return (
         <div>
 
-            <div className="m-10">
+            <div className="m-10 text-xl">
                 <h1 className="text-3xl text-cyan-800 lg:text-5xl my-10 font-bold text-center">{name}</h1>
                 <img className="w-full md:w-[80%] md:h-[70vh]  lg:w-[80%] lg:h-[80vh] mx-auto my-auto" src={photo} alt="" />
                 <div className="my-10 lg:mx-24">
-                    <p >{description}</p>
+                    <p>About:{description}</p>
                     <br />
-                    <p>{price} $</p>
+                    <p>Price:{price} $</p>
+                    <button className="btn bg-sky-500 text-white w-full h-2 mt-6 hover:text-blue-900" onClick={handleAddToCart}>Add To Cart</button>
                 </div>
                 <div>
-                   
-                        <button className="btn btn-primary" onClick={handleAddToCart}>Add To Cart</button>
-                   
+                        
                 </div>
             </div>
         </div>
