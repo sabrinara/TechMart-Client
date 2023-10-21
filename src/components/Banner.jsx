@@ -15,7 +15,7 @@ const Banner = ({ searchData, handleSearch, setSearchData }) => {
     <div>
       <div
         className="lg:hidden hero min-h-screen"
-        style={{ backgroundImage: 'url(https://i.ibb.co/BzYMdzg/bg-0.jpg)' }}
+        style={{ backgroundImage: 'url(https://i.ibb.co/bW17Ztn/bg-0.jpg)' }}
       >
         <div className="hero-overlay bg-opacity-80"></div>
         <div className="hero-content text-center text-neutral-content">
@@ -56,7 +56,7 @@ const Banner = ({ searchData, handleSearch, setSearchData }) => {
       >
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
-            src="https://i.ibb.co/BzYMdzg/bg-0.jpg"
+            src="https://i.ibb.co/bW17Ztn/bg-0.jpg"
             className="max-w-lg lg:max-w-xl rounded-lg shadow-2xl "
             alt="Banner" data-aos="fade-down-left"
           />

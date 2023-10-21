@@ -1,24 +1,30 @@
 import { useEffect } from "react";
+import { useContext } from "react";
 import { useState } from "react";
 import {  useParams } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const ABrandDetail = () => {
 
     const [product, setProduct] = useState({});
-
+    const { user } = useContext(AuthContext);
+    const email = user.email;
+    console.log(user);
     const { id } = useParams();
-    console.log(id);
+    // console.log(id);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://tech-elec-shop-backend.vercel.app/products/${id}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setProduct(data);
             })
             .catch((error) => console.error(error));
     }, [id])
-    console.log(product)
+
+    // console.log(product)
     const { photo, name, description, price,rating } = product || {};
 
     const cartProduct = {
@@ -26,11 +32,13 @@ const ABrandDetail = () => {
         name,
         description,
         price,
-        rating
+        rating,
+        email
     }
 
     const handleAddToCart = () => {
-        fetch('http://localhost:5000/carts', {
+
+        fetch('https://tech-elec-shop-backend.vercel.app/carts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,12 +47,18 @@ const ABrandDetail = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            // console.log(data); 
             if(data.insertedId){
-                alert('Added to cart')
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Product Added into My Cart Sucessfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Cool!',
+                  
+                  })
             }
         })
-        console.log(cartProduct);
+        console.log("here cart",cartProduct);
     }
 
     return (

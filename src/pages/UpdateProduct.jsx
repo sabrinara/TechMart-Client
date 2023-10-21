@@ -12,7 +12,7 @@ const UpdateProduct = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://tech-elec-shop-backend.vercel.app/products/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -37,7 +37,7 @@ const UpdateProduct = () => {
         const updatedProduct = { name, photo, price, description, type, rating, brand_name };
         console.log(updatedProduct);
 
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://tech-elec-shop-backend.vercel.app/products/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

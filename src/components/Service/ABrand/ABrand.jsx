@@ -12,7 +12,7 @@ const ABrand = () => {
     const { brand_name, slider1, slider2, slider3 } = abrand || {};
 
     useEffect(() => {
-        fetch('http://localhost:5000/products', {
+        fetch('https://tech-elec-shop-backend.vercel.app/products', {
             method: 'GET',
         })
             .then((res) => res.json())
