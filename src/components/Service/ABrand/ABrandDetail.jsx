@@ -73,7 +73,6 @@ const ABrandDetail = () => {
                     <button className="btn bg-sky-500 text-white w-full h-2 mt-6 hover:text-blue-900" onClick={handleAddToCart}>Add To Cart</button>
                 </div>
                 <div>
-                        
                 </div>
             </div>
         </div>

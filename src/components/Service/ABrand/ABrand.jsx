@@ -76,7 +76,7 @@ const ABrand = () => {
                                             emptySymbol={<span style={{ fontSize: '30px', color: 'teal' }}>☆</span>}
                                             fullSymbol={<span style={{ fontSize: '30px', color: 'teal' }}>★</span>}
                                         /></p>
-                                    <div className="flex flex-row items-center justify-start lg:justify-center gap-6 lg:gap-0 ">
+                                    <div className="flex flex-row items-center justify-start gap-6 lg:gap-3 ">
                                         <Link to={`/abranddetail/${product._id}`}>
                                             <button className="py-2 px-4 text-sm  rounded bg-sky-600 text-white hover:bg-cyan-500 hover:text-white">Details</button>
                                         </Link>

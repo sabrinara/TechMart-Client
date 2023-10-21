@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import Rating from 'react-rating';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const AddProduct = () => {
     const [rating, setRating] = useState(0);
+    const navigate = useNavigate();
     const handleAddProduct = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -35,8 +37,8 @@ const AddProduct = () => {
                         text: 'Product Added Sucessfully!',
                         icon: 'success',
                         confirmButtonText: 'Cool!',
-                      
                       })
+                      navigate('/');
                 }
             })
     }
