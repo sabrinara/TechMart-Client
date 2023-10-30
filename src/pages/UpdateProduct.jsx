@@ -55,7 +55,7 @@ const UpdateProduct = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool!',
                       })  
-                      navigate('/');
+                      navigate(-1);
                 }
             })
     }
